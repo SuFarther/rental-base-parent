@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.web.sys_notice.dao.SysNoticeDao">
+    <!--批量删除公告id-->
+<!--    <delete id="deleteUserByIds" parameterType="Long">-->
+<!--        delete from sys_notice where notice_id  in-->
+<!--        <foreach collection="array" item="noticeId" open="(" separator="," close=")">-->
+<!--            #{noticeId}-->
+<!--        </foreach>-->
+<!--    </delete>-->
+</mapper>

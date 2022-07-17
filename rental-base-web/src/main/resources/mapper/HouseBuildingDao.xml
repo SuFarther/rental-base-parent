@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.web.house_building.dao.HouseBuildingDao">
+
+
+<!--    <delete id="deleteBuildingsByIds" parameterType="Long">-->
+<!--        delete from house_building where build_id in-->
+<!--        <foreach item="buildId" collection="array" open="(" separator="," close=")">-->
+<!--            #{buildId}-->
+<!--        </foreach>-->
+<!--    </delete>-->
+</mapper>

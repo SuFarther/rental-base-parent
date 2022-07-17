@@ -1,0 +1,9 @@
+spring:
+  #这是因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # 环境 dev:开发环境|test:测试环境|prod:生产环境
+  profiles:
+    #激活的配置文件
+    active: test

@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.web.park_list.dao.ParkListDao">
+    <!--批量删除车位信息-->
+    <delete id="batchDelete" parameterType="com.company.web.park_list.pojo.ParkList">
+        delete from ParkList where parkId
+        in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

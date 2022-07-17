@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.web.house_unit.dao.HouseUnitDao">
+   <select id="getList" resultType="com.company.web.house_unit.pojo.HouseUnit">
+       SELECT hu.build_id,hu.unit_id,hu.unit_name,hb.`name` FROM house_unit as hu,house_building as hb WHERE hb.build_id = hu.build_id
+       <if test="unitName != null and unitName !=''">
+           and hu.unit_name like concat('%',#{unitName},'%')
+       </if>
+       <if test="buildName != null and buildName !=''">
+           and hb.name like concat('%',#{buildName},'%')
+       </if>
+   </select>
+</mapper>
